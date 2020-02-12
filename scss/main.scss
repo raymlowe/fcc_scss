@@ -1,0 +1,32 @@
+/*when including partial scss files, the leading _ and extension are not required here*/
+@import './resets';
+@import './variables';
+
+/*function example*/
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name);
+}
+
+body {
+    background: $primary-color;
+    color: $text-color;
+    
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+
+    /*Nesting example
+    * In this example, the '&' means 'parent' or ".main"
+    * We use "interpolation" to state that we don't simply want .main_paragraph, but we actually want everything before it --> #{&}
+    */
+    #{&}_paragraph{
+        /*weight is a function as defined above */
+        font-weight: weight(regular);   
+        &:hover {
+            color: pink;
+        }
+    }
+}
+

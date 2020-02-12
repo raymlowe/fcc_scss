@@ -1,0 +1,35 @@
+/*when including partial scss files, the leading _ and extension are not required here*/
+/*a file starting with '_' is a "partial" and will not compile to a CSS file itself */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Variables*/
+/*Maps a.k.a arrays*/
+/*function example*/
+body {
+  background: #272727;
+  color: #fff;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  /*Nesting example
+    * In this example, the '&' means 'parent' or ".main"
+    * We use "interpolation" to state that we don't simply want .main_paragraph, but we actually want everything before it --> .main
+    */
+}
+
+.main .main_paragraph {
+  /*weight is a function as defined above */
+  font-weight: 400;
+}
+
+.main .main_paragraph:hover {
+  color: pink;
+}
+/*# sourceMappingURL=main.css.map */

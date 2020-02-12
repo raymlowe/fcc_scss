@@ -1,0 +1,7 @@
+/*a file starting with '_' is a "partial" and will not compile to a CSS file itself */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
